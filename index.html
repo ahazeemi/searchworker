@@ -5,7 +5,8 @@
 <p>Check the "Network" tab in your browser's developer tools to see the returned search results.</p>'
 <script>
   function search() {
-    fetch('https://searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
+    //fetch('https://searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
+    fetch('http://api.plos.org/search?q=title:DNA').then(function(response) {
     console.log(response.json());
   });
   }
