@@ -1,16 +1,19 @@
 <h1>Search Revamp </h1>
-<p>Click the below button to perform a new search. This will make a search request to searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items, which will be intercepted by cloudflare worker</p>
+<p>Click the below button to perform a new search. This will make a search request to
+  searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items, which will be intercepted by cloudflare worker
+</p>
 <input type="text" id="text" value="Scala"></input>
 <button onclick='search()'>Search</button>
 <p>Check the "Network" tab in your browser's developer tools to see the returned search results.</p>'
 <script>
   function search() {
     //fetch('https://searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
-    fetch('http://searchrevamp.ga/api/reader/featured_items?search_string='+document.querySelector("#text").value,{
-    method: 'GET',
-    headers: {
-      'X-Purge-Cache': 'value-v',
-    }).then(function(response) {
+    fetch('http://searchrevamp.ga/api/reader/featured_items?search_string=' + document.querySelector("#text").value, {
+      method: 'GET',
+      headers: {
+        'X-Purge-Cache': 'purge',
+      }
+    }).then(function (response) {
       console.log(response.json());
     });
   }
