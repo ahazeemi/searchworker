@@ -1,4 +1,4 @@
-<h1>Search Revamp v1.1</h1>
+<h1>Search Revamp v1</h1>
 <p>Click the below button to perform a new search. This will make a search request to
   searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items, which will be intercepted by cloudflare worker
 </p>
@@ -8,11 +8,11 @@
 <script>
   function search() {
     //fetch('https://searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
-    fetch('http://searchrevamp.ga/api/reader/featured_items/', {
+    fetch('http://searchrevamp.ga/api/reader/featured_items?search_string=' + document.querySelector("#text").value, {
       method: 'GET',
-      headers: {
-        'X-Update-Search-Index': 'true',
-      }
+      // headers: {
+      //   'X-Update-Search-Index': 'true',
+      // }
     }).then(function (response) {
     });
   }
