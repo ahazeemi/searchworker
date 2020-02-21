@@ -8,7 +8,7 @@
 <script>
   function search() {
     //fetch('https://searchrevamp-dot-educative-dev-1.appspot.com/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
-    fetch('http://searchrevamp.ga/api/reader/featured_items?search_string=' + document.querySelector("#text").value, {
+    fetch('http://searchrevamp.ga/api/reader/lessons?search_string=' + document.querySelector("#text").value, {
       method: 'GET',
       // headers: {
       //   'X-Update-Search-Index': 'true',
