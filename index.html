@@ -7,7 +7,7 @@
 <p>Check the "Network" tab in your browser's developer tools to see the returned search results.</p>
 <script>
   function search() {
-    fetch('https://educative-dev-1.appspot.com/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
+    fetch('http://searchrevamp.ga/api/reader/featured_items?search_string='+document.querySelector("#text").value).then(function(response) {
 //     fetch('http://searchrevamp.ga/api/reader/lessons?collection_id=5249205949956096&search_string=' + document.querySelector("#text").value, {
 //       method: 'GET',
       // headers: {
